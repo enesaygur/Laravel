@@ -14,4 +14,5 @@ class Formislemleri extends Controller
     {
         return $request->metin;
     }
+
 }
