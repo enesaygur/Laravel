@@ -5,9 +5,15 @@ use App\Http\Controllers\Ornek;
 use App\Http\Controllers\Yonet;
 use App\Http\Controllers\Formislemleri;
 use App\Http\Controllers\Veritabaniislemleri;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/furkan', function () {
+    return view('welcome');
+});
+
 
 Route::get('/deneme',function (){
     return view('ornek');
@@ -21,3 +27,4 @@ Route::get("/form",[Formislemleri::class,'gorunum']);
 Route::middleware('arakontrol')->post("/form-sonuc",[Formislemleri::class,'sonuc'])->name('sonuc');
 
 Route::get("/ekle",[Veritabaniislemleri::class,'ekle']);
+Route::get("/guncelle",[Veritabaniislemleri::class,'guncelle']);
