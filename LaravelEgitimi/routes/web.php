@@ -28,3 +28,4 @@ Route::middleware('arakontrol')->post("/form-sonuc",[Formislemleri::class,'sonuc
 
 Route::get("/ekle",[Veritabaniislemleri::class,'ekle']);
 Route::get("/guncelle",[Veritabaniislemleri::class,'guncelle']);
+Route::get("/sil",[Veritabaniislemleri::class,'sil']);

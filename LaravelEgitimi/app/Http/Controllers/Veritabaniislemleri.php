@@ -19,4 +19,9 @@ class Veritabaniislemleri extends Controller
             "metin"=>"Bu metin güncellendi."
         ]);
     }
+
+    public function sil()
+    {
+        DB::table("bilgiler")->where("id",1)->delete();
+    }
 }
