@@ -9,7 +9,7 @@ class Veritabaniislemleri extends Controller
     public function ekle()
     {
         DB::table("bilgiler")->insert([
-            "metin"=>"Bu 2. satır için örnek bir metindir."
+            "metin"=>"Bu 3. satır için örnek bir metindir."
         ]);
     }
 
@@ -28,6 +28,11 @@ class Veritabaniislemleri extends Controller
     public function bilgiler()
     {
         $veriler=DB::table("bilgiler")->get();
-        print_r($veriler);
+
+        foreach ($veriler as $key => $bilgi)
+        {
+            echo $bilgi->id." - ".$bilgi->metin;
+            echo "<br>";
+        }
     }
 }
