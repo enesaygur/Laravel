@@ -34,5 +34,10 @@ class Veritabaniislemleri extends Controller
             echo $bilgi->id." - ".$bilgi->metin;
             echo "<br>";
         }
+        // v2
+        echo "<br>";
+        $veri=DB::table("bilgiler")->where("id",2)->first();
+        echo $veri->id."-".$veri->metin;
+
     }
 }
