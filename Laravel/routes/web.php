@@ -34,3 +34,4 @@ Route::get("/listele",[Veritabaniislemleri::class,'bilgiler']);
 Route::get("/modelliste",[Modelislemleri::class,'liste']);
 Route::get("/modelekle",[Modelislemleri::class,'ekle']);
 Route::get("/modelupdate",[Modelislemleri::class,'guncelle']);
+Route::get("/modelsil",[Modelislemleri::class,'sil']);

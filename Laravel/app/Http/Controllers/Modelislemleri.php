@@ -29,4 +29,10 @@ class Modelislemleri extends Controller
             "metin"=>"Model dosyasından update yapıldı.",
         ]);
     }
+
+    public function sil()
+    {
+        Bilgiler::whereId(4)->delete();
+        echo "1 satır silindi";
+    }
 }
