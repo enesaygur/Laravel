@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\iletisim;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Ornek;
 use App\Http\Controllers\Yonet;
@@ -35,3 +36,6 @@ Route::get("/modelliste",[Modelislemleri::class,'liste']);
 Route::get("/modelekle",[Modelislemleri::class,'ekle']);
 Route::get("/modelupdate",[Modelislemleri::class,'guncelle']);
 Route::get("/modelsil",[Modelislemleri::class,'sil']);
+
+Route::get("/iletisim",[iletisim::class,'index']);
+Route::post("/iletisim-sonuc",[iletisim::class,'ekleme'])->name('iletisim-sonuc');
