@@ -7,6 +7,7 @@ use App\Http\Controllers\Yonet;
 use App\Http\Controllers\Formislemleri;
 use App\Http\Controllers\Veritabaniislemleri;
 use App\Http\Controllers\Modelislemleri;
+use App\Http\Controllers\ResimYukle;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,3 +40,8 @@ Route::get("/modelsil",[Modelislemleri::class,'sil']);
 
 Route::get("/iletisim",[iletisim::class,'index']);
 Route::post("/iletisim-sonuc",[iletisim::class,'ekleme'])->name('iletisim-sonuc');
+
+Route::get('/upload',function (){
+    return view('upload');
+});
+Route::post('/resim-ilet',[ResimYukle::class,'resimyukleme'])->name('yukle');
