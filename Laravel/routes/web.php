@@ -51,3 +51,19 @@ Route::get('/uye',function (){
 });
 
 Route::post('/uye-kayit',[App\Http\Controllers\Uyelikislemleri::class,'uyekayit'])->name('uyekayit');
+
+Route::get('/tema',function (){
+    return view('pages.home');
+});
+Route::get('/galeri',function (){
+    return view('pages.galeri');
+});
+Route::get('/hizmetler',function (){
+    return view('pages.hizmetler');
+});
+Route::get('/iletisim-tema',function (){
+    return view('pages.iletisim');
+});
+Route::get('/kurumsal',function (){
+    return view('pages.kurumsal');
+});
