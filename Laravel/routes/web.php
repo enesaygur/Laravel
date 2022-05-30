@@ -45,3 +45,9 @@ Route::get('/upload',function (){
     return view('upload');
 });
 Route::post('/resim-ilet',[ResimYukle::class,'resimyukleme'])->name('yukle');
+
+Route::get('/uye',function (){
+    return view('uyelik');
+});
+
+Route::post('/uye-kayit',[App\Http\Controllers\Uyelikislemleri::class,'uyekayit'])->name('uyekayit');
