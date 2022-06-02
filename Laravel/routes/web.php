@@ -67,3 +67,14 @@ Route::get('/iletisim-tema',function (){
 Route::get('/kurumsal',function (){
     return view('pages.kurumsal');
 });
+
+Route::get('/resim',function (){
+  /* $img= Image::make('php.jpg')->resize(300,300);
+   $img->save("php_oran.jpg");
+   return $img->response('jpg');*/
+    return view('resim');
+});
+
+Route::post('/yukle',function (){
+    Image::make(request()->file('resim'))->resize('300,200')->save('yeniresim.jpg');
+})->name('yukle');
